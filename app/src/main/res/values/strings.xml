@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RealtimeDatabaseBasico</string>
+    <string name="add_todo">Add Todo</string>
 </resources>
