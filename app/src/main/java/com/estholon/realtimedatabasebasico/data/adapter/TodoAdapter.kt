@@ -5,11 +5,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.estholon.realtimedatabasebasico.R
+import com.estholon.realtimedatabasebasico.domain.entities.Actions
 import com.estholon.realtimedatabasebasico.domain.entities.Todo
 
 class TodoAdapter (
     private var todoList: List<Pair<String, Todo>> = emptyList(),
-    private val onItemSelected:(String)-> Unit
+    private val onItemSelected:(Actions, String)-> Unit
 ) :
     RecyclerView.Adapter<TodoViewHolder>(){
 

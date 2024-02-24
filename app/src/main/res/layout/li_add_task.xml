@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:padding="18dp"
+                android:text="@string/li_add_task_title"/>
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/li_add_task_title_hint"
+                android:inputType="text"
+                android:layout_marginHorizontal="2dp"
+                android:maxLength="128"
+                />
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/li_add_task_description_hint"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:layout_marginHorizontal="2dp"
+                android:maxLength="128"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/li_add_task_button"
+                />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    
+</FrameLayout>

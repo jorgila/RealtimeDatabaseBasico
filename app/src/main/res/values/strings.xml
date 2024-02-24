@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">RealtimeDatabaseBasico</string>
     <string name="add_todo">Add Todo</string>
+    <string name="li_add_task_title">Añadir tarea</string>
+    <string name="li_add_task_title_hint">Título</string>
+    <string name="li_add_task_description_hint">Descripción</string>
+    <string name="li_add_task_button">Añadir tarea</string>
 </resources>

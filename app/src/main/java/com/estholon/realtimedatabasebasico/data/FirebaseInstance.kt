@@ -18,12 +18,10 @@ class FirebaseInstance(context: Context) {
         FirebaseApp.initializeApp(context)
     }
 
-    fun writeOnFirebase(){
-
-        val randomValue: String = Random.nextInt(1,200).toString()
+    fun writeOnFirebase(title: String, description: String){
 
         val newItem = myRef.push()
-        newItem.setValue(getGenericTodoTasksItem(randomValue))
+        newItem.setValue(Todo(title,description))
 
     }
 
@@ -31,10 +29,11 @@ class FirebaseInstance(context: Context) {
         database.reference.addValueEventListener(postListener)
     }
 
-    private fun getGenericTodoTasksItem(randomValue: String) =
-        Todo(title = "Tarea $randomValue", description = "Esto es una descripción cremita")
-
     fun removeFromDatabase(reference: String) {
         myRef.child(reference).removeValue()
+    }
+
+    fun updateFromDatabase(reference: String) {
+        myRef.child(reference).child("done").setValue(true)
     }
 }
